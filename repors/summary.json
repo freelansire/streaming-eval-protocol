@@ -1,0 +1,11 @@
+{
+  "n_steps": 5000,
+  "mean_logloss": 0.17659141961247837,
+  "mean_brier": 0.011435667620028874,
+  "mean_acc": 0.9882,
+  "p95_latency_ms": 5.189195042476058,
+  "peak_mem_mb": 165.12109375,
+  "drift_flags_total": 0,
+  "drift_threshold": 0.04,
+  "window": 300
+}
