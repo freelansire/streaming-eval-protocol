@@ -131,7 +131,7 @@ class OnlineAdapter:
   title   = {Streaming Evaluation Protocol: Prequential Metrics, Latency, Memory Footprint, and Calibration Drift},
   year    = {2025},
   version = {1.0.0},
-  url     = {https://github.com/freelansire/streaming-eval-protocol},
+  url     = {https://doi.org/10.5281/zenodo.17983000},
   note    = {GitHub repository}
 }
 ```
