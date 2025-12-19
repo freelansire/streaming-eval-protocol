@@ -84,45 +84,6 @@ You can adjust the main experimental and evaluation settings in:
 - **`noise`** — noise level in the synthetic sensor stream (higher = harder, noisier dynamics).
 
 ---
-### Extending to your own model
-
-You can plug in your own online/streaming model as long as it can be updated incrementally and can produce a prediction (preferably a probability).
-
-#### Requirements
-1. **Incremental updates**
-   - Your model should support `partial_fit(...)` (recommended), **or**
-   - You should wrap it with a small adapter that performs incremental updates.
-
-2. **Prediction interface**
-   Implement **at least one** of the following methods:
-   - `predict_proba(X)` *(preferred: returns calibrated probabilities)*
-   - `decision_function(X)` *(accepted: converted to probability via sigmoid)*
-   - `predict(X)` *(fallback: converted to a coarse probability estimate)*
-
-#### How probability is derived
-The evaluator automatically selects the best available method to compute the class-1 probability:
-
-1. If `predict_proba` exists → uses `proba[:, 1]` as `p(y=1)`
-2. Else if `decision_function` exists → applies a sigmoid to map scores to `p(y=1)`
-3. Else if `predict` exists → maps the hard label to a simple probability proxy
-
-#### Example (minimal adapter)
-If your model does not support `partial_fit`, create a lightweight adapter:
-
-```python
-class OnlineAdapter:
-    def __init__(self, model):
-        self.model = model
-
-    def predict_proba(self, X):
-        return self.model.predict_proba(X)
-
-    def partial_fit(self, X, y, classes=None):
-        # Replace with your incremental update logic (e.g., buffer + periodic retrain)
-        self.model.fit(X, y)
-        return self
-```
----
 ## Extending to your own model
 
 You can plug in your own online/streaming model as long as it can be updated incrementally and can produce a prediction (preferably a probability).
