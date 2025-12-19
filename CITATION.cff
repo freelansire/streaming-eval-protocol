@@ -11,15 +11,16 @@ authors:
 repository-code: "https://github.com/freelansire/streaming-eval-protocol"
 keywords:
   - online-learning
-  -streaming-ml
-  -prequential-evaluation
-  -concept-drift
-  -calibration
-  -latency-measurement
-  -edge-computing
-  -real-time-ml
-  -model-evaluation
-  -drift-detection
-  -resource-constrained-ml
+  - streaming-ml
+  - prequential-evaluation
+  - concept-drift
+  - calibration
+  - latency-measurement
+  - edge-computing
+  - real-time-ml
+  - model-evaluation
+  - drift-detection
+  - resource-constrained-ml
 license: "MIT"
+
 
