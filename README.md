@@ -122,19 +122,7 @@ class OnlineAdapter:
         self.model.fit(X, y)
         return self
 ```
----
-#### Citation
 
-```bibtex
-@software{Streaming_Evaluation_Protocol,
-  author  = {Moses, Samuel},
-  title   = {Streaming Evaluation Protocol: Prequential Metrics, Latency, Memory Footprint, and Calibration Drift},
-  year    = {2025},
-  version = {1.0.0},
-  url     = {https://doi.org/10.5281/zenodo.17983000},
-  note    = {GitHub repository}
-}
-```
 
 ---
 ### Repo layout
