@@ -73,7 +73,7 @@ You can adjust the main experimental and evaluation settings in:
 - `src/run_demo.py`
 - `src/streaming_eval.py`
 
-#### Evaluation / calibration settings
+#### Evaluation / calibration setting
 - **`window`** — rolling window size used for calibration tracking (ECE + calibration gap).
 - **`ece_bins`** — number of bins used to compute **ECE (Expected Calibration Error)**.
 - **`warmup`** — minimum number of steps before establishing a baseline and enabling drift comparisons.
